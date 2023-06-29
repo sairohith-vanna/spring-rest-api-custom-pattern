@@ -2,6 +2,7 @@ package com.vanna.example.restpattern.controller;
 
 import com.vanna.example.restpattern.exceptions.ApplicationAPIException;
 import com.vanna.example.restpattern.service.ApplicationService;
+import com.vanna.example.restpattern.service.ApplicationServiceImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +17,7 @@ public class ApplicationController extends RestControllerBase {
 
     private final ApplicationService applicationService;
 
-    public ApplicationController(ApplicationService applicationService) {
+    public ApplicationController(ApplicationServiceImpl applicationService) {
         this.applicationService = applicationService;
     }
 
