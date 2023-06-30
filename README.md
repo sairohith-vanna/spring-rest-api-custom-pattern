@@ -9,7 +9,7 @@ Elements of the API Responses this codebase introduces:
 - `requestId` - to track the request that can be used for running the diagnostics
 - `correlationId` - if the request involves processing across multiple services, this is a valuable identifier to trace the workflow across integrations
 - `timestamp` - time of the request completion
-- `data` - the data that the response returns, such as an entity object or a DTO. This is derived from the generic parameter of `APIResponse`
+- `data` - the data that the response returns, such as an entity object or a DTO. The type of value is derived from the generic parameter of `APIResponse`
 - `message` - any message that the API wants to respond with
 - `errorCode` - an error code to indicate what family of errors the error response belongs to
 - `errors` - list of errors reported by the API
