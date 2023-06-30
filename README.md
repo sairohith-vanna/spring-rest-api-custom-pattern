@@ -22,7 +22,7 @@ There are two abstract `Exception` classes that subclass `Exception` and add nec
 - `ApplicationAbstractException` - Adds two fields `statusCode` and `errorCode`: (a) `statusCode` helps the controller determine what status code the response should contain in error scenarios and (b) `errorCode` as described above helps determine the error code of the response
 - `TraceableApplicationAbstractException` - Adds three fields `requestId`, `correlationId` and `timestamp` to determine the values accordingly as specified in the above elements description. This can. be used when the request has to traced for diagnostic purposes
 
-### The Base Parent Controller
+### The Base Abstract REST Controller
 
 `RestControllerBase` is an abstract controller that serves as a base class for all the REST controllers. This will reduce the boilerplate needed to build `ResponseEntity<APIResponse<T>>` type. It provides a few helper methods, `ok()`, `success()`, `error()` in different overloads, for different scenarios. The controllers inheriting this class have the luxury to simply invoke any of the methods by just passing a parameter or two to build a sophisticated response with the aforementioned field elements.
 
